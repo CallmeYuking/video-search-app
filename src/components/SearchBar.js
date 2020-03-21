@@ -3,9 +3,9 @@ import React from 'react';
 class SearchBar extends React.Component {
  state = { term: ''};
 
-//  onInputChange = (event) => {
-
-//  }
+ onInputChange = (event) => {
+    this.setState({ term: event.target.value});
+ }
 
  render() {
      return (
@@ -16,7 +16,9 @@ class SearchBar extends React.Component {
                 <input 
                     type="text" 
                     value={this.state.term} 
-                    // onChange={this.onInputChange}
+                    onChange={this.onInputChange}
+                    // alternate way:
+                    // onChange={e => this.setState({ term: e.target.value })}
                 />
               </div>
           </form>
