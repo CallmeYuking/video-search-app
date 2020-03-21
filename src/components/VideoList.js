@@ -5,7 +5,7 @@ const VideoList = ({ videos }) => {
     const renderedList = videos.map((video) => {
         return <VideoItem video={video} />
     })
-    return <div>{renderedList}</div>
+    return <div className='ui replaced divided list'>{renderedList}</div>
 
 }
 
